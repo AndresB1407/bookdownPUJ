@@ -1,5 +1,5 @@
---- 
-title: "A Minimal Book Example"
+# --- 
+title: "Análisis de series de tiempo: Índice S&P 500"
 author: "John Doe"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

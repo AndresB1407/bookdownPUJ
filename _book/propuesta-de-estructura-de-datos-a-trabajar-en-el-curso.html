@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 — | _main.knit</title>
+  <title>Chapter 3 Propuesta de estructura de datos a trabajar en el curso | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 — | _main.knit" />
+  <meta property="og:title" content="Chapter 3 Propuesta de estructura de datos a trabajar en el curso | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 — | _main.knit" />
+  <meta name="twitter:title" content="Chapter 3 Propuesta de estructura de datos a trabajar en el curso | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="about.html"/>
 
-<link rel="next" href="about.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -172,33 +172,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="section" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> —<a href="index.html#section" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>title: “Análisis de series de tiempo: Índice S&amp;P 500”
-author: “John Doe”
-date: “2024-10-14”
-site: bookdown::bookdown_site
-documentclass: book
-bibliography: [book.bib, packages.bib]
-# url: your book url like <a href="https://bookdown.org/yihui/bookdown" class="uri">https://bookdown.org/yihui/bookdown</a>
-# cover-image: path to the social sharing image like images/cover.jpg
-description: |
-This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.
-link-citations: yes
-github-repo: rstudio/bookdown-demo
-—</p>
+<div id="propuesta-de-estructura-de-datos-a-trabajar-en-el-curso" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Propuesta de estructura de datos a trabajar en el curso<a href="propuesta-de-estructura-de-datos-a-trabajar-en-el-curso.html#propuesta-de-estructura-de-datos-a-trabajar-en-el-curso" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La estructura de información a trabajar en el curso será la serie de tiempo correspondiente al índice S&amp;P 500, el cual es un indicador ponderado del valor de capitalización de las 500 compañías más importantes de Estados Unidos.</p>
+<p>Calculado por la evaluadora de riesgo Standard &amp; Poor’s, este índice captura el 80% del comportamiento de la capitalización bursátil en el mercado americano. En tanto su estructura posee mayor diversidad en el tipo de compañías que lo componen, se tiene que el índice S&amp;P 500 es una buena medida para monitorear y predecir la actividad económica en los enclaves económicos de mayor importancia a nivel global.</p>
+<p>En general, la pertinencia del uso de este dataset radica en 3 razones principales:</p>
+<ul>
+<li><p>En principio, se trata de una estructura de información concisa, legítima en el marco de las actividades de sectores financieros globales, y sin problemas previos en cuanto a la limpieza de sus observaciones. Por lo que una rutina progresiva de análisis sobre esta base de datos se puede dar con mayor facilidad e interpretabilidad.</p></li>
+<li><p>El estudio del comportamiento de la capitalización bursátil a nivel global, contenido en el dataset escogido, implica una vista previa y una posible profundización del análisis financiero en el marco de las series de tiempo sobre el comportamiento de firmas, sectores y economías de alto impacto. De esta manera, la aplicación de la rutina de análisis del curso sobre este dataset puede decantar en un ejercicio robusto que puede extenderse más allá de los propósitos básicos de aprendizaje, y conformar una herramienta útil para las intenciones del autor.</p></li>
+<li><p>El estudio de la estructura y comportamiento de este dataset como serie de tiempo, inmerso en las dinámicas de intercambio de los mercados de activos financieros, puede representar una herramienta de profundización para la toma de decisiones en materia de optimización de portafolios, y, en general, en materia de comprensión e implementación práctica de instrumentos aplicados de análisis de procesos estocásticos y metodologías de pronósticos.</p></li>
+</ul>
+<div id="dataset" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Dataset:<a href="propuesta-de-estructura-de-datos-a-trabajar-en-el-curso.html#dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Summary:<a href="propuesta-de-estructura-de-datos-a-trabajar-en-el-curso.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>##      Date             Close/Last        Open           High           Low      
+##  Length:2527        Min.   :1829   Min.   :   0   Min.   :   0   Min.   :   0  
+##  Class :character   1st Qu.:2364   1st Qu.:2365   1st Qu.:2371   1st Qu.:2353  
+##  Mode  :character   Median :2938   Median :2933   Median :2947   Median :2919  
+##                     Mean   :3265   Mean   :3256   Mean   :3273   Mean   :3237  
+##                     3rd Qu.:4147   3rd Qu.:4144   3rd Qu.:4169   3rd Qu.:4123  
+##                     Max.   :5815   Max.   :5778   Max.   :5822   Max.   :5775</code></pre>
+</div>
+<div id="scatter-plott-de-la-serie-de-tiempo" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Scatter plott de la serie de tiempo:<a href="propuesta-de-estructura-de-datos-a-trabajar-en-el-curso.html#scatter-plott-de-la-serie-de-tiempo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="_main_files/figure-html/scatter%20plot-1.png" width="672" /></p>
+</div>
+<div id="fuente" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Fuente:<a href="propuesta-de-estructura-de-datos-a-trabajar-en-el-curso.html#fuente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://www.nasdaq.com/market-activity/index/spx/historical?page=1&amp;rows_per_page=10&amp;timeline=y10" class="uri">https://www.nasdaq.com/market-activity/index/spx/historical?page=1&amp;rows_per_page=10&amp;timeline=y10</a></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="about.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="about.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -229,7 +242,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/base_de_datos.Rmd",
 "text": "Edit"
 },
 "history": {

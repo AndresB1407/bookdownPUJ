@@ -1,0 +1,74 @@
+# Propuesta de estructura de datos a trabajar en el curso
+
+La estructura de información a trabajar en el curso será la serie de tiempo correspondiente al índice S&P 500, el cual es un indicador ponderado del valor de capitalización de las 500 compañías más importantes de Estados Unidos.
+
+Calculado por la evaluadora de riesgo Standard & Poor's, este índice captura el 80% del comportamiento de la capitalización bursátil en el mercado americano. En tanto su estructura posee mayor diversidad en el tipo de compañías que lo componen, se tiene que el índice S&P 500 es una buena medida para monitorear y predecir la actividad económica en los enclaves económicos de mayor importancia a nivel global.
+
+En general, la pertinencia del uso de este dataset radica en 3 razones principales:
+
+- En principio, se trata de una estructura de información concisa, legítima en el marco de las actividades de sectores financieros globales, y sin problemas previos en cuanto a la limpieza de sus observaciones. Por lo que una rutina progresiva de análisis sobre esta base de datos se puede dar con mayor facilidad e interpretabilidad.
+
+- El estudio del comportamiento de la capitalización bursátil a nivel global, contenido en el dataset escogido, implica una vista previa y una posible profundización del análisis financiero en el marco de las series de tiempo sobre el comportamiento de firmas, sectores y economías de alto impacto. De esta manera, la aplicación de la rutina de análisis del curso sobre este dataset puede decantar en un ejercicio robusto que puede extenderse más allá de los propósitos básicos de aprendizaje, y conformar una herramienta útil para las intenciones del autor.
+
+- El estudio de la estructura y comportamiento de este dataset como serie de tiempo, inmerso en las dinámicas de intercambio de los mercados de activos financieros, puede representar una herramienta de profundización para la toma de decisiones en materia de optimización de portafolios, y, en general, en materia de comprensión e implementación práctica de instrumentos aplicados de análisis de procesos estocásticos y metodologías de pronósticos.
+
+
+## Dataset:
+
+```{r setup, include=TRUE, warning=FALSE, message=FALSE, echo=FALSE}
+
+# Load necessary libraries
+library(rvest)
+library(dplyr)
+
+# Load necessary libraries
+library(readr)
+
+# Import the downloaded CSV file (change the path accordingly)
+spx_data <- read_csv("C:/Users/ASUS/OneDrive - PUJ Cali/Documentos/MAESTRÍA PUJ/analisis de series de tiempo/datasets/HistoricalData_1728883475484.csv")
+
+# Display the first few rows of the dataset
+head(spx_data)
+
+```
+## Summary:
+
+```{r summary, include=TRUE, warning=FALSE, message=FALSE, echo=FALSE}
+
+summary(spx_data)
+```
+## Scatter plott de la serie de tiempo:
+
+```{r scatter plot, include=TRUE, warning=FALSE, message=FALSE, echo=FALSE}
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Print the column names to check their exact names
+#print(colnames(spx_data))
+
+# Convert the Date column to Date type
+spx_data <- spx_data %>% 
+  mutate(Date = as.Date(Date, format = "%m/%d/%Y"))
+
+# Update the column name here after checking the output of print(colnames(spx_data))
+spx_data <- spx_data %>%
+  mutate(Close_price = as.numeric(gsub("[^0-9.]", "", `Close/Last`)))  # Update this line with the correct name
+
+# Remove rows with NA values in Date or Close_price
+spx_data <- spx_data %>%
+  filter(!is.na(Date) & !is.na(Close_price))
+
+# Create the scatter plot
+ggplot(spx_data, aes(x = Date, y = Close_price)) +
+  geom_point(color = "blue", alpha = 0.6) +
+  labs(title = "S&P 500 Close Prices Over Time",
+       x = "Date",
+       y = "Close Price") +
+  theme_minimal()
+```
+
+## Fuente:
+
+https://www.nasdaq.com/market-activity/index/spx/historical?page=1&rows_per_page=10&timeline=y10 
