@@ -1,6 +1,6 @@
 # --- 
 title: "Análisis de series de tiempo: Índice S&P 500"
-author: "John Doe"
+author: "Jesús Andrés Burbano Gómez"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book

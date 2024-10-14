@@ -3,6 +3,8 @@ about
 usage
 render-book
 preview-book
+hello-bookdown
+a-section
 propuesta-de-estructura-de-datos-a-trabajar-en-el-curso
 dataset
 summary
